@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap");
+
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Proza+Libre&display=swap');
+
+
+* {
+  font-family: "Poppins", sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: white !important;
+}
+:root {
+  --form-heading-color: blue;
+}
+
+h4,
+h5 {
+  color: var(--form-heading-color);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.add-student-avatar {
+  background-color: darkblue !important;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -75%);
+}
+.letter-circle {
+  width: 40px;
+  height: 40px;
+  width: 2rem;
+  height: 2rem;
+  /* margin-right: 10px; */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: crimson;
+  color: white;
+}
+
+
+
+.header_css{
+  font-family: 'Proza Libre', sans-serif;
+
+}
+
+.header_css2{
+  font-family: 'Libre Baskerville', serif;
+  margin: 10px 0 !important;
+  color: black !important;
+  font-weight: 600 !important;
+}
+
+.card_box_shadow{
+  /* box-shadow:rgba(0, 0, 0, 0.56) 0px 22px 70px 4px !important;
+  box-shadow:rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px !important; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px !important;
+}
+
+.card_hover_effect{
+  transition: all .5s ease-in-out !important;
+}
+.card_hover_effect:hover{
+  transform: scale(1.1,1.1) !important;
+}
+
+
+.active .MuiButtonBase-root{
+  background-color: #dddbff !important;
+}
+
