@@ -1,9 +1,13 @@
-import { message, Form, Avatar } from "antd";
-import { TextField, Button } from "@material-ui/core";
+import { message, Form, Avatar, Typography } from "antd";
+import { TextField, Button, Card, Box } from "@material-ui/core";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import axios from "axios";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
+
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import LockIcon from '@material-ui/icons//Lock';
+
 import "../styles/login.css";
 import { useAuth } from "../context/AuthContext";
 import { useEffect, useState } from "react";
@@ -51,11 +55,20 @@ const Login = () => {
 
   return (
     <>
+    <div>
+
+    
       <section className="login col-11 d-flex">
         <div className="flex-2">
-          <img src="https://img.freepik.com/free-vector/access-control-system-abstract-concept_335657-3180.jpg?w=740&t=st=1680892600~exp=1680893200~hmac=11ac2401c67da5b6c304d53ea7b1b8a34dd9f60bcbb7399eaaa4457597e6ba17" />
+          <img src="images/Capture.png" />
         </div>
         <div className="col-md-5 col-sm-8 col-11 mx-auto text-center">
+          <Typography className="heading" style={{justifyContent:'start'}}>{"Welcome Back :)"}</Typography>
+          <Typography className="heading2">
+            Get ready to experience seamless access to your account with just
+            one click. 🔔
+          </Typography>
+
           <Form
             style={{
               // boxShadow: "1px 2px 10px aqua",
@@ -65,36 +78,55 @@ const Login = () => {
             onFinish={onFinish}
             onFinishFailed={onFinishFailed}
           >
-            <Avatar className=" avatar my-3">
+            {/* <Avatar className=" avatar my-3">
               <LockOutlinedIcon />
-            </Avatar>
+            </Avatar> */}
 
-            <h4>Sign In</h4>
+            {/* <h4>Sign In</h4> */}
+          
+
             <Form.Item
               name="email"
               rules={[{ required: true, message: "Please input your email!" }]}
             >
-              <TextField
-                type={"email"}
-                label="Email"
-                placeholder="enter valid email"
-                variant="outlined"
-                className="col-12 my-3"
-              />
+              <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                <AccountCircleIcon
+                className=""
+                  sx={{color: "action.active", mr: 1, my: 0.5 }}
+                />
+                <TextField
+                  id="input-with-sx"
+                  label="Email Address"
+                  variant="standard"
+                  type={"email"}
+                  placeholder="Enter email address"
+                  className="col-10"
+                />
+              </Box>
             </Form.Item>
+
+           
+
             <Form.Item
               name="password"
               rules={[
                 { required: true, message: "Please input your password!" },
               ]}
             >
-              <TextField
-                type={"password"}
-                label="Password"
-                placeholder="enter password"
-                variant="outlined"
-                className="col-12 my-3"
-              />
+              <Box sx={{ display: "flex", alignItems: "flex-end" }}>
+                <LockIcon
+                className=""
+                  sx={{ color: "action.active", mr: 1, my: 0.5 }}
+                />
+                <TextField
+                  id="input-with-sx"
+                  variant="standard"
+                  type={"password"}
+                  label="Password"
+                  placeholder="Enter Password"
+                  className="col-10"
+                />
+              </Box>
             </Form.Item>
 
             <Button
@@ -108,6 +140,7 @@ const Login = () => {
           </Form>
         </div>
       </section>
+      </div>
     </>
   );
 };
